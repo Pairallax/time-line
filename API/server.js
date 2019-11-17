@@ -5,7 +5,7 @@ const docs = require("express-mongoose-docs");
 
 // mongoose Promise is deprecated; cast it to global.Promise
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.CUSTOMCONNSTR_MyConnectionString || "mongodb://localhost/time-line", {
+mongoose.connect(process.env.MONGO_URL || "mongodb://localhost/time-line", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).catch(
