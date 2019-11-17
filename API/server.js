@@ -15,6 +15,7 @@ server.use(jsonParser);
 
 // routing middleware
 // TODO add routes
+server.get('/', (req, res) => res.send('Hello Wolrd'));
 server.use("/api", require("./controller/userController"));
 server.use("/api", require("./controller/lineupController"));
 server.use("/api", require("./controller/searchController"));
